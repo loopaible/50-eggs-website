@@ -1,0 +1,41 @@
+:root{
+
+    /* #64826E */
+    --primary-h:140;
+    --primary-s:13%;
+    --primary-l:45%;
+    --primary: var(--primary-h), var(--primary-s), var(--primary-l);
+
+    /* #D97B7B */
+    --secondary-h:113;
+    --secondary-s:13%;
+    --secondary-l:76%;
+    --secondary: var(--secondary-h), var(--secondary-s), var(--secondary-l);
+    
+    /* #728BB4 */
+    --tertiary-h:217;
+    --tertiary-s:31%;
+    --tertiary-l:58%;
+    --tertiary: var(--tertiary-h), var(--tertiary-s), var(--tertiary-l);
+
+    /* #FFF9EE */
+    --light-yellow-h:39;
+    --light-yellow-s:100%;
+    --light-yellow-l:97%;
+    --light-yellow: var(--light-yellow-h), var(--light-yellow-s), var(--light-yellow-l);
+
+    /* #1D1D1B */
+    --dark-grey-h:60;
+    --dark-grey-s:4%;
+    --dark-grey-l:11%;
+    --dark-grey: var(--dark-grey-h), var(--dark-grey-s), var(--dark-grey-l);
+
+    --brand-blue: #3b6a9e;
+
+}
+
+.primary-bg{background-color: hsl(var(--primary));}
+.secondary-bg{background-color: hsl(var(--secondary));}
+.tertiary-bg{background-color: hsl(var(--tertiary));}
+.light-yellow-bg{background-color: hsl(var(--light-yellow));}
+
