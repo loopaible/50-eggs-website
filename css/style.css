@@ -489,3 +489,9 @@ main{background-color: hsl(var(--light-yellow));}
 .booking-section .btn:not(:first-child){margin-top: var(--lg);}
 
 .contact-block > :not(:last-child){margin-bottom: var(--xl);}
+
+.concept-sticky-footer{position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f7f0ea; border-top: .05rem solid rgba(60,60,55,0.15); z-index: 100; padding: 1.5rem var(--gutter);}
+.concept-sticky-footer .container{display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 0;}
+.concept-sticky-logo{font-family: var(--font-futura); font-weight: 700; font-size: 1.6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-blue); text-decoration: none; white-space: nowrap;}
+.concept-sticky-actions{display: flex; align-items: center; gap: 1.5rem;}
+.concept-sticky-actions .btn{padding: 0.8rem 1.8rem; font-size: 1.1rem;}
