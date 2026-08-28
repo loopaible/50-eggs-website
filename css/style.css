@@ -250,6 +250,7 @@ figure.image img{will-change: transform;}
     .intro-section article .btn{margin-top: 0;}
 }
 @media(width > 991px){
+    #introSectionRowTwo figure{order:2;}
 }
 .about-eyebrow{font-family: var(--font-futura); font-weight: 400; font-size: var(--fs); letter-spacing: .05em; text-transform: uppercase; color: var(--brand-blue);}
 .about-title{font-family: var(--font-futura); font-weight: 700; font-size: clamp(2.7rem, 3.4vw, 4.2rem); letter-spacing: .02em; text-transform: uppercase; color: var(--brand-blue);}
