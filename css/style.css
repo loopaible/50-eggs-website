@@ -490,19 +490,20 @@ main{background-color: hsl(var(--light-yellow));}
 .contact-block > :not(:last-child){margin-bottom: var(--xl);}
 .wakuda-showcase{background-color: #f7f0ea; padding: var(--xl) 0;}
 .wakuda-showcase-rows{display: flex; flex-direction: column; gap: var(--xl);}
-.wakuda-split{display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: center;}
-.wakuda-split--right{grid-auto-flow: dense; grid-template-columns: 1fr 1fr;}
-.wakuda-split--right > :first-child{grid-column: 2;}
-.wakuda-split__content{padding: var(--md) var(--lg);}
-.wakuda-split__eyebrow{font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-blue); margin-bottom: 0.5rem; font-weight: 500;}
-.wakuda-split__title{font-size: 2.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--brand-blue); line-height: 1.2;}
+.wakuda-split{display: flex; gap: var(--gutter); align-items: center;}
+.wakuda-split--right{flex-direction: row-reverse;}
+.wakuda-split > *{flex: 1 1 0%; min-width: 0;}
+.wakuda-split__content{padding: 0;}
+.wakuda-split__eyebrow{font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-blue); margin-bottom: 0.5rem;}
+.wakuda-split__title{font-size: 2.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--brand-blue);}
 .wakuda-split__copy{font-size: 1rem; line-height: 1.7; color: #3c3c37; margin-bottom: 1.5rem;}
 .wakuda-split__cta{display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--brand-blue); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.05em; transition: background-color 300ms ease;}
 .wakuda-split__cta:hover{background-color: #1a3a52;}
-.wakuda-split figure.duo-image{margin: 0; aspect-ratio: 4/5; overflow: hidden;}
-.wakuda-split figure.duo-image img{width: 100%; height: 100%; object-fit: cover; display: block;}
+.wakuda-split figure{margin: 0;}
+.wakuda-split figure.duo-image{aspect-ratio: 4/5; overflow: hidden;}
+.wakuda-split figure img{width: 100%; height: 100%; object-fit: cover; display: block;}
 @media(width < 992px){
-    .wakuda-split{grid-template-columns: 1fr; gap: var(--md);}
-    .wakuda-split--right > :first-child{grid-column: auto;}
+    .wakuda-split{flex-direction: column;}
+    .wakuda-split--right{flex-direction: column;}
     .wakuda-split__title{font-size: 1.8rem;}
 }
