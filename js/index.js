@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // discover-more), swaps to gold over the gold press section, and gains its cream
     // background otherwise once scrolled.
     var headerEl = document.getElementById('headerElement');
-    var blueSections = document.querySelectorAll('.hero-v2:not(.hero-gold), .concept-next, .room-section');
+    var blueSections = document.querySelectorAll('.hero-v2:not(.hero-gold), .concept-next, .room-section, .has-dark-nav');
     var goldSections = document.querySelectorAll('.concept-press, .press-section, .hero-v2.hero-gold');
     if (headerEl) {
         function updateHeaderBg() {
