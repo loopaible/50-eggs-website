@@ -252,11 +252,7 @@ figure.image img{will-change: transform;}
 @media(width > 991px){
     #introSectionRowTwo figure{order:2;}
 }
-.intro-section{background-color: var(--brand-blue);}
-.intro-section .about-eyebrow{color: white;}
-.intro-section .about-title{color: white;}
-.intro-section .about-copy{color: white;}
-.intro-section .about-copy p{color: white;}
+.intro-section{background-color: #f7f0ea;}
 .about-eyebrow{font-family: var(--font-futura); font-weight: 400; font-size: var(--fs); letter-spacing: .05em; text-transform: uppercase; color: var(--brand-blue);}
 .about-title{font-family: var(--font-futura); font-weight: 700; font-size: clamp(2.7rem, 3.4vw, 4.2rem); letter-spacing: .02em; text-transform: uppercase; color: var(--brand-blue);}
 .about-copy{font-family: var(--font-futura); display: flex; flex-direction: column; gap: var(--sm);}
