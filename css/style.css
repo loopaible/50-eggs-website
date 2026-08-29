@@ -318,14 +318,15 @@ figure.image img{will-change: transform;}
 .rooms-content-block ul li:hover{opacity: 70%;}
 .rooms-content-block ul li.active{opacity: 1;}
 .rooms-content-block ul li.active a span:first-child{transform:translateX(var(--sm));}
-.rooms-content-block ul li a{text-transform: uppercase; font-size: var(--fs); color: white; display: flex; align-items: center; min-height: 6rem;}
+.rooms-content-block ul li a{text-transform: uppercase; font-size: var(--fs); color: white; display: flex; align-items: center; min-height: 6rem; padding-left: 0;}
 .block-link-arrow{margin-left: auto; font-size: 1.6rem; transition: transform 300ms ease;}
 .rooms-content-block ul li.active .block-link-arrow{transform: rotate(180deg);}
-.block-link-copy{font-family: var(--font-family); font-size: var(--fs); line-height: 1.6; color: white; text-transform: none; max-height: 0; opacity: 0; overflow: hidden; transition: max-height 400ms ease, opacity 300ms ease, padding-bottom 400ms ease; padding-bottom: 0;}
-.rooms-content-block ul li.active .block-link-copy{max-height: 20rem; opacity: 1; padding-bottom: 2rem;}
+.block-link-copy{font-family: var(--font-family); font-size: var(--fs); line-height: 1.6; color: white; text-transform: none; max-height: 0; opacity: 0; overflow: hidden; transition: max-height 400ms ease, opacity 300ms ease, padding-bottom 400ms ease; padding-bottom: 0; padding-left: 0;}
+.rooms-content-block ul li.active .block-link-copy{max-height: 20rem; opacity: 1; padding-bottom: 2rem; padding-left: 0;}
 .rooms-content-block .btn.btn-white{border-color: white; color: white;}
 .rooms-content-block .btn.btn-white:hover{background-color: white; color: var(--brand-blue);}
 @media(width < 991px){
+    .rooms-content-block .about-title{font-size: clamp(1.8rem, 4vw, 2.7rem);}
     .rooms-grid{grid-template-columns: 1fr; gap: 0; height: auto;}
     .room-section-sticky{position: static; height: auto; overflow: visible;}
     .rooms-images-viewport{height: auto; overflow: visible;}
