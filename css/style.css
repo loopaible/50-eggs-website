@@ -504,4 +504,4 @@ main{background-color: hsl(var(--light-yellow));}
 .concept-sticky-logo{font-family: var(--font-futura); font-weight: 700; font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase; color: white; text-decoration: none; white-space: nowrap;}
 .concept-sticky-actions{display: flex; align-items: center; gap: 1rem;}
 .concept-sticky-actions .btn{padding: 0.7rem 1.5rem; font-size: 1rem; background-color: white; color: var(--brand-blue); border: none; border-radius: 999px;}
-.concept-sticky-actions .btn:hover{background-color: #f7f0ea;}
+.concept-sticky-actions .btn:hover{background-color: #f7f0ea; color: var(--brand-blue); border: none;}
