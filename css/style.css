@@ -68,7 +68,7 @@ footer .footer-text-logo{font-family: var(--font-logo); font-weight: 700; font-s
 }
 .hero-section{overflow: hidden; position: relative;}
 
-.hero-v2{height: auto; min-height: 100svh; background-color: var(--brand-blue); display: flex; flex-direction: column; justify-content: flex-end; padding: 18rem var(--gutter) 0;}
+.hero-v2{height: auto; min-height: 100svh; background-color: var(--brand-blue); display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(6rem, 12vw, 12rem) var(--gutter) 0;}
 .hero-v2.hero-gold{background-color: #b1723f;}
 .hero-text{text-align: center; margin-bottom: 7rem;}
 .hero-heading{font-family: var(--font-futura); font-weight: 400; text-transform: uppercase; font-size: clamp(2.8rem, 4.4vw, 5.2rem); line-height: 1.15; letter-spacing: .01em; color: #f7f0ea;}
