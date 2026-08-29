@@ -68,6 +68,23 @@ document.addEventListener('DOMContentLoaded', function () {
     (function () {
         var track = document.getElementById('heroCarouselTrack');
         if (!track) return;
+
+        // Randomize carousel items
+        var sets = track.querySelectorAll('.hero-carousel-set');
+        if (sets.length > 0) {
+            var firstSet = sets[0];
+            var items = Array.from(firstSet.querySelectorAll('.hero-carousel-item'));
+            if (items.length > 3) {
+                // Fisher-Yates shuffle
+                for (var i = items.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = items[i].cloneNode(true);
+                    items[i].replaceWith(items[j].cloneNode(true));
+                    items[j].replaceWith(temp);
+                }
+            }
+        }
+
         var setWidth = 0;
         var offset = 0;
         var BASE_SPEED = 1.6; // px/frame at rest

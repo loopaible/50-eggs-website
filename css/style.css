@@ -23,10 +23,6 @@ body.page-concept header .nav-links a, body.page-concept header .nav-dropdown-ic
 body.page-concept header.on-blue .nav-links a, body.page-concept header.on-gold .nav-links a, body.page-concept header.on-blue .nav-dropdown-icon, body.page-concept header.on-gold .nav-dropdown-icon{color: white !important;}
 header .nav-links a .roll{display: block; transition: transform 450ms cubic-bezier(0.65, 0, 0.35, 1);}
 header .nav-links a:hover .roll{transform: translateY(-50%);}
-header .nav-links a:hover{color: var(--brand-blue);}
-header.scrolled .nav-links a:hover{color: white;}
-header.on-blue .nav-links a:hover, header.on-gold .nav-links a:hover{color: var(--brand-blue);}
-body.page-concept header .nav-links a:hover{color: white;}
 header .nav-links a .roll-line{display: block; height: 1.3em; line-height: 1.3em;}
 .nav-item{position: relative; height: 100%; display: flex; align-items: center;}
 .nav-dropdown-icon{position: relative; display: inline-block; width: 1em; height: 1em; vertical-align: middle;}
@@ -79,7 +75,7 @@ footer .footer-text-logo{font-family: var(--font-logo); font-weight: 700; font-s
 .hero-subheading{font-family: var(--font-family); font-weight: 400; font-size: 1.9rem; color: #f7f0ea; margin-top: 2.2rem;}
 .hero-carousel{overflow: hidden; margin-left: calc(var(--gutter) * -1); margin-right: calc(var(--gutter) * -1); width: calc(100% + var(--gutter) * 2);}
 .hero-carousel-track{display: flex; align-items: center; width: max-content; will-change: transform;}
-.hero-carousel-set{display: flex; align-items: center; flex-shrink: 0; gap: 1.2rem; padding-right: 1.2rem;}
+.hero-carousel-set{display: flex; align-items: center; flex-shrink: 0; gap: 2.4rem; padding-right: 2.4rem;}
 .hero-carousel-item{display: block; overflow: hidden; flex-shrink: 0; width: 26rem; height: 36rem;}
 .hero-carousel-item-wide{width: 44rem;}
 .single-article-section{background-color: #f7f0ea !important;}
@@ -498,6 +494,11 @@ main{background-color: hsl(var(--light-yellow));}
 .booking-section .btn:not(:first-child){margin-top: var(--lg);}
 
 .contact-block > :not(:last-child){margin-bottom: var(--xl);}
+
+@media(width < 1200px){
+    .about-title{font-size: clamp(1.8rem, 2.5vw, 3.7rem);}
+    .rooms-content-block .about-title{font-size: clamp(1.5rem, 2.2vw, 2.7rem);}
+}
 
 .concept-sticky-footer{position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background-color: var(--brand-blue); z-index: 100; padding: 1rem 2.5rem; border-radius: 999px; box-shadow: 0 8px 32px rgba(0,0,0,0.12);}
 .concept-sticky-footer .container{display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; padding: 0; max-width: 100%;}
