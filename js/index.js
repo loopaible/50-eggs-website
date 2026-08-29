@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         track.addEventListener('mouseenter', function () { paused = true; });
         track.addEventListener('mouseleave', function () { paused = false; });
 
-        // Drag functionality
+        // Drag functionality: click and hold to drag
         var isDragging = false;
         var dragStart = 0;
         var dragOffset = 0;
@@ -115,12 +115,12 @@ document.addEventListener('DOMContentLoaded', function () {
             isDragging = true;
             dragStart = e.clientX;
             dragOffset = 0;
+            paused = true;
         });
 
         document.addEventListener('mousemove', function (e) {
             if (!isDragging) return;
             dragOffset = e.clientX - dragStart;
-            paused = true;
         });
 
         document.addEventListener('mouseup', function () {
