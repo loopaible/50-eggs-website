@@ -106,39 +106,36 @@ document.addEventListener('DOMContentLoaded', function () {
         track.addEventListener('mouseenter', function () { paused = true; });
         track.addEventListener('mouseleave', function () { paused = false; });
 
-        // Drag functionality: click and hold to drag
+        // Drag functionality: click and drag to scroll carousel
         var isDragging = false;
         var dragStart = 0;
-        var dragOffset = 0;
+        var dragCurrent = 0;
 
         track.addEventListener('mousedown', function (e) {
             isDragging = true;
             dragStart = e.clientX;
-            dragOffset = 0;
+            dragCurrent = e.clientX;
             paused = true;
         });
 
         document.addEventListener('mousemove', function (e) {
             if (!isDragging) return;
-            dragOffset = e.clientX - dragStart;
+            dragCurrent = e.clientX;
         });
 
         document.addEventListener('mouseup', function () {
             if (!isDragging) return;
             isDragging = false;
-            if (Math.abs(dragOffset) > 10) {
-                offset -= dragOffset * 0.5;
+            var dragDistance = dragStart - dragCurrent;
+            if (Math.abs(dragDistance) > 10) {
+                offset -= dragDistance;
             }
             paused = false;
-            dragOffset = 0;
         });
 
         function tick() {
             scrollBoost *= 0.94;
-            if (isDragging) {
-                var displayOffset = offset + dragOffset;
-                track.style.transform = 'translateX(' + displayOffset + 'px)';
-            } else if (!paused) {
+            if (!paused) {
                 var speed = BASE_SPEED + scrollBoost;
                 offset -= speed;
                 if (setWidth > 0) {
