@@ -34,6 +34,11 @@ header .nav-links a .roll-line{display: block; height: 1.3em; line-height: 1.3em
 .nav-item:hover .nav-dropdown-menu, .nav-item:focus-within .nav-dropdown-menu{opacity: 1; visibility: visible; transform: translateY(0);}
 .nav-dropdown-menu li{padding: .9rem 2rem;}
 .nav-dropdown-menu a{color: var(--brand-blue) !important; font-size: 1.3rem;}
+body header .nav-links .nav-dropdown-menu a,
+body.page-concept header.on-blue .nav-links .nav-dropdown-menu a,
+body.page-concept header.on-gold .nav-links .nav-dropdown-menu a,
+header.on-blue .nav-links .nav-dropdown-menu a,
+header.scrolled .nav-links .nav-dropdown-menu a{color: var(--brand-blue) !important;}
 @media(width < 768px){
     .nav-item{height: auto; display: block;}
     .nav-dropdown-menu{position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: transparent; margin-top: 1rem; padding: 0 0 0 1.5rem;}
