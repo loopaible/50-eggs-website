@@ -7,12 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var overlay = document.querySelector('.page-transition-overlay');
         if (!overlay) return;
 
-        requestAnimationFrame(function () {
+        function revealOverlay() {
             overlay.classList.add('is-animating');
-            requestAnimationFrame(function () {
-                overlay.classList.add('is-hidden');
-            });
-        });
+            overlay.classList.add('is-hidden');
+        }
+        // Next frame so the covered state paints first, then it transitions away.
+        requestAnimationFrame(function () { requestAnimationFrame(revealOverlay); });
+        // Safety nets: fire even if rAF is throttled (background tab) or a frame is missed.
+        setTimeout(revealOverlay, 250);
+        setTimeout(revealOverlay, 1200);
+        window.addEventListener('pageshow', function (e) { if (e.persisted) revealOverlay(); });
 
         document.addEventListener('click', function (e) {
             var a = e.target.closest('a');
@@ -470,28 +474,31 @@ document.addEventListener('DOMContentLoaded', function () {
         update();
     }
 
-    // Blog card stack: cards start separated with a gap; scrolling down pulls them
-    // together into an overlapping stack (later cards painted on top, covering only the
-    // trailing edge of the one before). Scrolling back up undoes it, since both the gap
-    // and the track position are driven directly by scroll progress, not a one-way
-    // animation.
+    // Blog card stack: while the tall wrapper scrolls, the sticky viewport stays pinned
+    // and the row of cards is translated horizontally in step with scroll progress, so
+    // every card passes through. Cards also start slightly separated and pull together
+    // as you scroll. Progress is derived directly from scroll position (0 at the top of
+    // the wrapper, 1 once its bottom reaches the bottom of the pinned area), so it is
+    // fully reversible.
     var blogWrapper = document.getElementById('blogStackWrapper');
     var blogStack = document.getElementById('blogStack');
+    var blogSticky = blogWrapper ? blogWrapper.querySelector('.blog-stack-sticky') : null;
     var blogCards = blogWrapper ? Array.prototype.slice.call(blogWrapper.querySelectorAll('.blog-card')) : [];
 
-    if (blogWrapper && blogStack && blogCards.length) {
-        var GAP_START = 30; // px, cards separated at rest
-        var OVERLAP_END = -160; // px, fully overlapped at end of scroll
+    if (blogWrapper && blogStack && blogSticky && blogCards.length) {
+        var GAP_START = 24;   // px, cards separated at rest
+        var OVERLAP_END = -90; // px, pulled together at end of scroll
+        var END_PAD = 40;      // px, keep the last card slightly off the right edge
 
         function isBlogPinnable() {
-            return window.matchMedia('(min-width: 901px)').matches;
+            return window.matchMedia('(min-width: 900px)').matches;
         }
 
         function updateBlogStack() {
             if (!isBlogPinnable()) return;
+
             var rect = blogWrapper.getBoundingClientRect();
-            var stickyH = window.innerHeight;
-            var scrollable = rect.height - stickyH;
+            var scrollable = rect.height - blogSticky.offsetHeight;
             var progress = scrollable > 0 ? -rect.top / scrollable : 0;
             progress = Math.min(Math.max(progress, 0), 1);
 
@@ -500,9 +507,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (i > 0) card.style.marginLeft = margin + 'px';
             });
 
-            var viewportW = blogWrapper.parentElement.clientWidth;
-            var trackW = blogStack.scrollWidth;
-            var maxScroll = Math.max(trackW - viewportW, 0);
+            var maxScroll = Math.max(blogStack.scrollWidth - blogSticky.clientWidth + END_PAD, 0);
             blogStack.style.transform = 'translateX(-' + (progress * maxScroll) + 'px)';
         }
 
@@ -513,12 +518,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        window.addEventListener('scroll', function () {
+        function onBlogScroll() {
             if (isBlogPinnable()) updateBlogStack(); else resetBlogStack();
-        }, { passive: true });
-        window.addEventListener('resize', function () {
-            if (isBlogPinnable()) updateBlogStack(); else resetBlogStack();
-        });
-        if (isBlogPinnable()) updateBlogStack();
+        }
+
+        window.addEventListener('scroll', onBlogScroll, { passive: true });
+        window.addEventListener('resize', onBlogScroll);
+        onBlogScroll();
     }
 });
