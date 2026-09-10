@@ -79,13 +79,32 @@ document.addEventListener('DOMContentLoaded', function () {
             var firstSet = sets[0];
             var items = Array.from(firstSet.querySelectorAll('.hero-carousel-item'));
             if (items.length > 3) {
-                // Fisher-Yates shuffle
+                // Fisher-Yates shuffle, avoiding two same-concept slides in a row
                 for (var i = items.length - 1; i > 0; i--) {
                     var j = Math.floor(Math.random() * (i + 1));
-                    var temp = items[i].cloneNode(true);
-                    items[i].replaceWith(items[j].cloneNode(true));
-                    items[j].replaceWith(temp);
+                    var t = items[i]; items[i] = items[j]; items[j] = t;
                 }
+                for (var k = 1; k < items.length; k++) {
+                    if (items[k].dataset.concept === items[k - 1].dataset.concept) {
+                        for (var s = k + 1; s < items.length; s++) {
+                            if (items[s].dataset.concept !== items[k - 1].dataset.concept) {
+                                var sw = items[k]; items[k] = items[s]; items[s] = sw;
+                                break;
+                            }
+                        }
+                    }
+                }
+                firstSet.innerHTML = '';
+                items.forEach(function (el) { firstSet.appendChild(el); });
+            }
+            // Keep every other set (aria-hidden clones) identical to the shuffled first set
+            for (var d = 1; d < sets.length; d++) {
+                sets[d].innerHTML = firstSet.innerHTML;
+                sets[d].querySelectorAll('.hero-carousel-item').forEach(function (el) {
+                    el.setAttribute('tabindex', '-1');
+                    var img = el.querySelector('img');
+                    if (img) img.setAttribute('alt', '');
+                });
             }
         }
 
