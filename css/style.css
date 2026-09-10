@@ -48,6 +48,11 @@ body.page-concept .site-logo{color: var(--brand-blue);}
 body.page-concept header.on-blue .site-logo, body.page-concept header.on-gold .site-logo{color: white !important;}
 .site-logo .logo-main{font-family: var(--font-logo); font-weight: 700; font-size: 2.6rem; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;}
 .site-logo .logo-sub{font-family: var(--font-logo); font-weight: 700; font-size: .95rem; letter-spacing: .38em; text-transform: uppercase; opacity: .8; margin-top: .4rem; white-space: nowrap;}
+.site-logo img{height: 3.6rem; width: auto; display: block; filter: brightness(0) invert(1);}
+header.scrolled .site-logo img, body.page-concept .site-logo img{filter: none;}
+header.on-blue .site-logo img, header.on-gold .site-logo img,
+body.page-concept header.on-blue .site-logo img, body.page-concept header.on-gold .site-logo img{filter: brightness(0) invert(1);}
+.footer-v2-logo img{height: 4.4rem; width: auto; display: block; margin: 0 auto;}
 footer .footer-text-logo{font-family: var(--font-logo); font-weight: 700; font-size: clamp(4rem, 6vw, 8rem); letter-spacing: .06em; color: white;}
 @media(width < 992px){
     .site-logo .logo-main{font-size: 2rem;}
