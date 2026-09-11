@@ -86,7 +86,7 @@ footer .footer-text-logo{font-family: var(--font-logo); font-weight: 700; font-s
 .hero-carousel{overflow: hidden; margin-left: calc(var(--gutter) * -1); margin-right: calc(var(--gutter) * -1); width: calc(100% + var(--gutter) * 2);}
 .hero-carousel-track{display: flex; align-items: center; width: max-content; will-change: transform;}
 .hero-carousel-set{display: flex; align-items: center; flex-shrink: 0; gap: 2.4rem; padding-right: 2.4rem;}
-.hero-carousel-item{display: block; overflow: hidden; flex-shrink: 0; width: 26rem; height: 36rem;}
+.hero-carousel-item{display: block; overflow: hidden; flex-shrink: 0; width: 26rem; height: 36rem; margin: 0;}
 .hero-carousel-item-wide{width: 44rem;}
 .single-article-section{background-color: #f7f0ea !important;}
 .hero-carousel-item img{width: 100%; height: 100%; object-fit: cover;}
