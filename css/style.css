@@ -508,6 +508,25 @@ main{background-color: hsl(var(--light-yellow));}
     .rooms-content-block .about-title{font-size: clamp(1.5rem, 2.2vw, 2.7rem);}
 }
 
+.press-page-section{padding: clamp(10rem, 14vw, 16rem) 0 var(--xxl);}
+.press-page-grid{display: flex; align-items: flex-start; gap: clamp(3rem, 6vw, var(--gutter));}
+.press-page-left{flex: 0 0 34rem; position: sticky; top: 12rem;}
+.press-page-heading{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(3.2rem, 4.2vw, 5.6rem); line-height: 1.05; letter-spacing: .01em; color: var(--brand-blue); margin: 1rem 0 var(--md);}
+.press-page-intro{font-family: var(--font-family); font-size: var(--h5); line-height: 1.6; color: var(--brand-blue); max-width: 40rem; margin-bottom: var(--lg);}
+.press-page-contact{display: inline-flex; flex-direction: column; gap: .3rem; padding-top: var(--md); border-top: .1rem solid rgba(59,106,158,0.25); color: var(--brand-blue);}
+.press-page-contact span:first-child{font-family: var(--font-futura); font-weight: 700; font-size: 1.2rem; letter-spacing: .1em; text-transform: uppercase; opacity: .6;}
+.press-page-contact-email{font-family: var(--font-family); font-size: var(--fs);}
+.press-page-right{flex: 1 1 auto; min-width: 0;}
+.press-row{padding: var(--lg) 0; border-top: .1rem solid rgba(59,106,158,0.15); transition: opacity 250ms ease;}
+.press-row:first-child{border-top: none; padding-top: 0;}
+.press-row:hover{opacity: .55;}
+.press-row-meta{display: flex; align-items: center; gap: .8rem; font-family: var(--font-futura); font-weight: 700; font-size: 1.2rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-blue); opacity: .55; margin-bottom: 1.2rem;}
+.press-row-dot{opacity: .6;}
+.press-row-title{font-family: var(--font-futura); font-weight: 700; font-size: clamp(1.9rem, 2.3vw, 2.7rem); line-height: 1.35; letter-spacing: .01em; color: var(--brand-blue); max-width: 62rem;}
+@media (max-width: 900px){
+    .press-page-grid{flex-direction: column;}
+    .press-page-left{position: static; flex: none;}
+}
 .concept-sticky-footer{position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background-color: var(--brand-blue); z-index: 100; padding: 1rem 2.5rem; border-radius: 999px; box-shadow: 0 8px 32px rgba(0,0,0,0.12);}
 .concept-sticky-footer .container{display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; padding: 0; max-width: 100%;}
 .concept-sticky-logo{font-family: var(--font-futura); font-weight: 700; font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase; color: white; text-decoration: none; white-space: nowrap;}
