@@ -533,10 +533,10 @@ main{background-color: hsl(var(--light-yellow));}
     .press-row-image{width: 100%; height: 20rem; margin-top: 1.6rem;}
 }
 /* Journal (blog) index */
-.journal-hero{padding: clamp(10rem, 14vw, 16rem) 0 var(--xl);}
+.journal-hero{background-color: #f7f0ea; padding: clamp(10rem, 14vw, 16rem) 0 var(--xl);}
 .journal-hero-heading{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(3.2rem, 4.2vw, 5.6rem); line-height: 1.05; letter-spacing: .01em; color: var(--brand-blue); margin: 1rem 0 var(--md);}
 .journal-hero-intro{font-family: var(--font-family); font-size: var(--h5); line-height: 1.6; color: var(--brand-blue); max-width: 56rem;}
-.journal-grid-section{padding-bottom: var(--xxl);}
+.journal-grid-section{background-color: #f7f0ea; padding-bottom: var(--xxl);}
 .journal-grid{display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--lg) var(--md);}
 .journal-card{display: flex; flex-direction: column; text-decoration: none; color: var(--brand-blue);}
 .journal-card-image{width: 100%; aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: var(--sm);}
@@ -550,12 +550,12 @@ main{background-color: hsl(var(--light-yellow));}
 @media (max-width: 700px){ .journal-grid{grid-template-columns: 1fr;} }
 
 /* Journal (blog) post */
-.post-hero{padding: clamp(10rem, 14vw, 15rem) 0 var(--md); text-align: center;}
+.post-hero{background-color: #f7f0ea; padding: clamp(10rem, 14vw, 15rem) 0 var(--md); text-align: center;}
 .post-hero-meta{display: flex; align-items: center; justify-content: center; gap: .8rem; font-family: var(--font-futura); font-weight: 700; font-size: 1.2rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-blue); opacity: .55; margin-bottom: var(--sm);}
 .post-hero-title{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(2.8rem, 4vw, 5rem); line-height: 1.1; color: var(--brand-blue); max-width: 80rem; margin: 0 auto;}
 .post-hero-image{width: 100%; height: clamp(24rem, 42vw, 54rem); overflow: hidden; margin-top: var(--xl);}
 .post-hero-image img{width: 100%; height: 100%; object-fit: cover; display: block;}
-.post-body-section{padding: var(--xl) 0 var(--xxl);}
+.post-body-section{background-color: #f7f0ea; padding: var(--xl) 0 var(--xxl);}
 .post-body{max-width: 74rem; margin: 0 auto;}
 .post-body p{font-family: var(--font-family); font-size: var(--h5); line-height: 1.75; color: var(--brand-blue); margin-bottom: var(--md);}
 .post-body p:last-child{margin-bottom: 0;}
