@@ -532,6 +532,37 @@ main{background-color: hsl(var(--light-yellow));}
     .press-row{flex-direction: column; align-items: stretch;}
     .press-row-image{width: 100%; height: 20rem; margin-top: 1.6rem;}
 }
+/* Journal (blog) index */
+.journal-hero{padding: clamp(10rem, 14vw, 16rem) 0 var(--xl);}
+.journal-hero-heading{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(3.2rem, 4.2vw, 5.6rem); line-height: 1.05; letter-spacing: .01em; color: var(--brand-blue); margin: 1rem 0 var(--md);}
+.journal-hero-intro{font-family: var(--font-family); font-size: var(--h5); line-height: 1.6; color: var(--brand-blue); max-width: 56rem;}
+.journal-grid-section{padding-bottom: var(--xxl);}
+.journal-grid{display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--lg) var(--md);}
+.journal-card{display: flex; flex-direction: column; text-decoration: none; color: var(--brand-blue);}
+.journal-card-image{width: 100%; aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: var(--sm);}
+.journal-card-image img{width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 500ms ease;}
+.journal-card:hover .journal-card-image img{transform: scale(1.04);}
+.journal-card-meta{display: flex; align-items: center; gap: .8rem; font-family: var(--font-futura); font-weight: 700; font-size: 1.2rem; letter-spacing: .08em; text-transform: uppercase; opacity: .55; margin-bottom: 1rem;}
+.journal-card-title{font-family: var(--font-futura); font-weight: 700; font-size: clamp(1.8rem, 1.8vw, 2.2rem); line-height: 1.3; margin-bottom: .8rem;}
+.journal-card-excerpt{font-family: var(--font-family); font-size: 1.5rem; line-height: 1.6; opacity: .85;}
+.journal-card-link{display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-family); font-size: 1.4rem; margin-top: 1.2rem;}
+@media (max-width: 1100px){ .journal-grid{grid-template-columns: repeat(2, 1fr);} }
+@media (max-width: 700px){ .journal-grid{grid-template-columns: 1fr;} }
+
+/* Journal (blog) post */
+.post-hero{padding: clamp(10rem, 14vw, 15rem) 0 var(--md); text-align: center;}
+.post-hero-meta{display: flex; align-items: center; justify-content: center; gap: .8rem; font-family: var(--font-futura); font-weight: 700; font-size: 1.2rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-blue); opacity: .55; margin-bottom: var(--sm);}
+.post-hero-title{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(2.8rem, 4vw, 5rem); line-height: 1.1; color: var(--brand-blue); max-width: 80rem; margin: 0 auto;}
+.post-hero-image{width: 100%; height: clamp(24rem, 42vw, 54rem); overflow: hidden; margin-top: var(--xl);}
+.post-hero-image img{width: 100%; height: 100%; object-fit: cover; display: block;}
+.post-body-section{padding: var(--xl) 0 var(--xxl);}
+.post-body{max-width: 74rem; margin: 0 auto;}
+.post-body p{font-family: var(--font-family); font-size: var(--h5); line-height: 1.75; color: var(--brand-blue); margin-bottom: var(--md);}
+.post-body p:last-child{margin-bottom: 0;}
+.post-pull-quote{font-family: var(--font-futura); font-weight: 700; font-size: clamp(2rem, 2.6vw, 2.8rem); line-height: 1.4; color: var(--brand-blue); max-width: 74rem; margin: var(--lg) auto; padding-left: var(--md); border-left: .3rem solid var(--brand-blue);}
+.post-back-link{display: inline-flex; align-items: center; gap: .6rem; font-family: var(--font-futura); font-weight: 700; font-size: 1.3rem; letter-spacing: .05em; text-transform: uppercase; color: var(--brand-blue); margin-bottom: var(--lg);}
+.post-related-section{background-color: #f7f0ea; padding: var(--xxl) 0;}
+.post-related-heading{text-align: center; margin-bottom: var(--lg);}
 .concept-sticky-footer{position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background-color: var(--brand-blue); z-index: 100; padding: 1rem 2.5rem; border-radius: 999px; box-shadow: 0 8px 32px rgba(0,0,0,0.12);}
 .concept-sticky-footer .container{display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; padding: 0; max-width: 100%;}
 .concept-sticky-logo{font-family: var(--font-futura); font-weight: 700; font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase; color: white; text-decoration: none; white-space: nowrap;}
