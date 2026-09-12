@@ -233,7 +233,7 @@ figure.image img{will-change: transform;}
 .about-statement-subhead{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(1.8rem, 2.1vw, 2.4rem); color: var(--brand-blue); margin-bottom: var(--sm);}
 .about-statement-right p{font-family: var(--font-family); font-size: var(--fs); line-height: 1.7; color: var(--brand-blue); margin-bottom: var(--sm);}
 
-.about-team-section{background-color: #f7f0ea; padding: 0 0 calc(var(--xxl) * 1.4); text-align: center;}
+.about-team-section{background-color: #f7f0ea; padding: calc(var(--xxl) * 1.4) 0; text-align: center;}
 .about-team-heading{font-family: var(--font-futura); font-weight: 700; text-transform: uppercase; font-size: clamp(2.7rem, 3.4vw, 4.2rem); color: var(--brand-blue); margin: 1rem 0 1.5rem;}
 .about-team-subcopy{font-family: var(--font-family); font-size: var(--h5); color: var(--brand-blue); max-width: 70rem; margin: 0 auto var(--xl); line-height: 1.6;}
 .about-team-grid{display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter) var(--lg); text-align: left;}
