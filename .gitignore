@@ -1,2 +1,5 @@
 .DS_Store
 images/.DS_Store
+
+# Full-resolution originals stay local (Drive); the site serves optimized copies from img/
+images/

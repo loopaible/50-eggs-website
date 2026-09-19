@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/font.css?v=140" />
-    <link rel="stylesheet" href="css/color.css?v=140" />
-    <link rel="stylesheet" href="css/global.css?v=140" />
-    <link rel="stylesheet" href="css/style.css?v=140" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Jost:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/font.css?v=142" />
+    <link rel="stylesheet" href="css/color.css?v=142" />
+    <link rel="stylesheet" href="css/global.css?v=142" />
+    <link rel="stylesheet" href="css/style.css?v=142" />
 
     <!--META-->
     <meta name="description" content="Our Previous Successes &mdash; 50 Eggs Hospitality Group." />
@@ -27,7 +30,7 @@
             <header id="headerElement" class="header">
                 <div class="container nav-grid">
                     <a href="index.html" class="site-logo" id="siteLogo">
-                        <img src="images/50%20Eggs%20NEW%20LOGO%20blue.png" alt="50 Eggs Hospitality Group" />
+                        <img src="img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs Hospitality Group" />
                     </a>
                     <nav class="nav-links">
                         <div class="nav-item">
@@ -42,7 +45,7 @@
                                 <li><a href="previous-concepts.html">Previous Concepts</a></li>
                             </ul>
                         </div>
-                        <a href="#">Corporate Dining</a>
+                        <a href="corporate-dining.html">Corporate Dining</a>
                         <a href="#">Hospitality Consulting</a>
                         <a href="#">Sports &amp; Venues</a>
                         <a href="about.html">Who We Are</a>
@@ -68,30 +71,46 @@
 
             <section class="restaurants-section">
                 <div class="container">
-                    <p class="journal-hero-intro" style="margin-bottom:var(--lg);">Before Wakuda, Chica, Spring Chicken and Bonanno Brothers, these were the restaurants that built our reputation &mdash; and the standard every concept since has had to live up to.</p>
+                    <p class="journal-hero-intro" style="margin-bottom:var(--lg);">Before Wakuda, Chica and Spring Chicken, these were the restaurants that built our reputation &mdash; and the standard every concept since has had to live up to.</p>
                 </div>
                 <div class="container restaurants-grid">
                     <div class="restaurant-card" id="yardbird">
-                        <figure class="view-hover" data-label="View Now">
-                            <img src="images/CHICA/CHICA%20Images%20for%20Concept%20Page%20Carousel/image%209.JPG" alt="Yardbird Table &amp; Bar" />
+                        <figure>
+                            <img src="img/CHICA/CHICA%20Images%20for%20Concept%20Page%20Carousel/image%209-sm.webp" alt="Yardbird Table &amp; Bar" loading="lazy" decoding="async" />
                         </figure>
                         <h2 class="restaurant-card-title">Yardbird Table &amp; Bar</h2>
-                        <p class="restaurant-card-copy">Founder John Kunkel&rsquo;s original Southern kitchen and the restaurant that put 50 Eggs on the national map &mdash; a James Beard Award semifinalist nod and a spot on Bon App&eacute;tit&rsquo;s 50 Best New Restaurants list. Its fried chicken and hospitality standard live on today in Spring Chicken.</p>
-                        <a href="blog-james-beard.html" class="btn btn-dark-grey">Read The Story</a>
+                        <p class="restaurant-card-copy">Our Southern flagship. Yardbird opened in Miami Beach in 2011 and was named a James Beard Foundation Best New Restaurant semifinalist and one of Bon App&eacute;tit&rsquo;s 50 Best New Restaurants in 2012 &mdash; the restaurant that put 50 Eggs on the map.</p>
+                        <a href="https://gardenandgun.com/articles/the-gg-guide-to-miami/" target="_blank" rel="noopener" class="btn btn-dark-grey">Read The G&amp;G Guide to Miami</a>
+                    </div>
+                    <div class="restaurant-card" id="lime">
+                        <figure>
+                            <img src="img/CHICA/CHICA%20Images%20for%20Concept%20Page%20Carousel/image%203-sm.webp" alt="Lime Fresh Mexican Grill" loading="lazy" decoding="async" />
+                        </figure>
+                        <h2 class="restaurant-card-title">Lime Fresh Mexican Grill</h2>
+                        <p class="restaurant-card-copy">Where it started for founder John Kunkel: a fresh, fast-casual Mexican concept that grew into a regional brand before being acquired by Ruby Tuesday.</p>
                     </div>
                     <div class="restaurant-card" id="swine">
-                        <figure class="view-hover" data-label="View Now">
-                            <img src="images/WAKUDA/WAKUDA%20Images%20for%20Concept%20Page%20Carousel/image%208.jpg" alt="Swine Southern Table &amp; Bar" />
+                        <figure>
+                            <img src="img/WAKUDA/WAKUDA%20Images%20for%20Concept%20Page%20Carousel/image%208-sm.webp" alt="Swine Southern Table &amp; Bar" loading="lazy" decoding="async" />
                         </figure>
                         <h2 class="restaurant-card-title">Swine Southern Table &amp; Bar</h2>
-                        <p class="restaurant-card-copy">A Coral Gables sibling to Yardbird, built around a whole-animal butchery program and scratch Southern cooking &mdash; another early proof point for the standard 50 Eggs still holds every concept to.</p>
+                        <p class="restaurant-card-copy">A pork-centric Southern table and bar in Coral Gables &mdash; barn wood, barbecue and a whole-hog approach to Southern cooking.</p>
+                        <a href="https://www.miaminewtimes.com/restaurants/swine-southern-table-and-bar-hogs-barn-wood-and-barbecue-in-coral-gables-6588888" target="_blank" rel="noopener" class="btn btn-dark-grey">Read The Miami New Times Review</a>
+                    </div>
+                    <div class="restaurant-card" id="khong">
+                        <figure>
+                            <img src="img/WAKUDA/WAKUDA%20Images%20for%20Concept%20Page%20Carousel/image%209-sm.webp" alt="Khong River House" loading="lazy" decoding="async" />
+                        </figure>
+                        <h2 class="restaurant-card-title">Khong River House</h2>
+                        <p class="restaurant-card-copy">Bold, pungent flavors from the countries along the Mekong River &mdash; Myanmar, Laos, Thailand, Cambodia and Vietnam. A 2013 James Beard Foundation Best New Restaurant semifinalist in Miami Beach.</p>
+                        <a href="https://andrewzimmern.com/khong-river-house/" target="_blank" rel="noopener" class="btn btn-dark-grey">Read More</a>
                     </div>
                 </div>
             </section>
 
             <footer>
                 <div class="container footer-v2-top">
-                    <a href="/" class="footer-v2-logo"><img src="images/50%20Eggs%20NEW%20LOGO%20blue.png" alt="50 Eggs Hospitality Group" /></a>
+                    <a href="/" class="footer-v2-logo"><img loading="lazy" decoding="async" src="img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs Hospitality Group" /></a>
                     <p class="footer-v2-tagline">Rooted in Miami since 2001, 50 Eggs Hospitality Group has grown into four celebrated restaurant concepts, where quality, creativity, and genuine hospitality come together to create unforgettable dining experiences. Sign up for our newsletter to stay in the know.</p>
                     <form class="footer-v2-newsletter" action="#" method="post">
                         <label for="footer-newsletter-email" class="visually-hidden">Email address</label>
@@ -120,7 +139,7 @@
                     </div>
                     <div class="footer-v2-col">
                         <p class="footer-v2-col-title">Journal</p>
-                        <p>Stories from the kitchen.</p>
+                        <p>Hospitality insights &amp; news.</p>
                         <p><a href="blog.html">Read The Journal</a></p>
                     </div>
                 </div>
@@ -149,7 +168,7 @@
         </div>
     </div>
 
-    <script src="js/index.js?v=140"></script>
+    <script src="js/index.js?v=142"></script>
 
 </body>
 </html>
