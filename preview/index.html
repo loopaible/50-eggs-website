@@ -47,7 +47,16 @@
         .nav{position:fixed;top:0;left:0;right:0;z-index:50;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:var(--bg);border-bottom:1px solid var(--line);transform:translateY(-101%);transition:transform .45s var(--ease)}
         .nav.show{transform:none}
         .nav-logo img{height:28px;width:auto}
-        .nav-links{display:flex;gap:40px;font-size:14px;letter-spacing:.28px}
+        .nav-links{display:flex;align-items:center;gap:26px;font-size:13px;letter-spacing:.2px}
+        .has-dd{position:relative;padding:18px 0}
+        .dd{position:absolute;top:100%;left:-18px;min-width:210px;background:var(--bg);border:1px solid var(--line);padding:10px 18px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+        .has-dd:hover .dd,.has-dd:focus-within .dd{opacity:1;visibility:visible;transform:none}
+        .dd a{padding:8px 0;white-space:nowrap}
+        .has-dd > a::before{content:"";display:inline-block;width:0}
+        .burger{display:none;width:28px;height:16px;position:relative}
+        .burger i{position:absolute;left:0;right:0;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),top .3s var(--ease)}
+        .burger i:nth-child(1){top:3px}.burger i:nth-child(2){top:11px}
+        .nav.open .burger i:nth-child(1){top:7px;transform:rotate(45deg)}.nav.open .burger i:nth-child(2){top:7px;transform:rotate(-45deg)}
         .nav-links a{position:relative}
         .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}
         .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
@@ -204,10 +213,19 @@
             .q-grid{grid-template-columns:1fr 260px}
             .faq-grid{grid-template-columns:340px 1fr;column-gap:80px}
         }
+        @media (max-width:1240px){
+            .burger{display:block}
+            .nav-links{position:fixed;top:58px;left:0;right:0;max-height:calc(100svh - 58px);overflow:auto;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--pad) 20px;font-size:18px;display:none}
+            .nav.open .nav-links{display:flex}
+            .nav-links > a,.has-dd > a{display:block;padding:12px 0}
+            .has-dd{padding:0;width:100%}
+            .dd{position:static;opacity:1;visibility:visible;transform:none;border:0;padding:0 0 6px 16px;min-width:0}
+            .dd a{font-size:16px;color:var(--muted);padding:6px 0}
+        }
         @media (max-width:900px){
             :root{--pad:24px}
             .h2,.cta-card h2{font-size:36px}
-            .nav-links{gap:20px;font-size:13px}.nav-links a:nth-child(n+3):not(:last-child){display:none}
+            
             .hero{min-height:620px}
             .hero-in{padding-top:110px}
             .hero h1{font-size:42px}
@@ -247,13 +265,31 @@
     <!-- NAV (slides in when scrolling up) -->
     <header class="nav" id="nav">
         <a class="nav-logo" href="#" aria-label="50 Eggs Hospitality Group"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs Hospitality Group" /></a>
-        <nav class="nav-links">
-            <a href="#">Our Work</a>
+        <nav class="nav-links" id="navLinks">
+            <div class="has-dd">
+                <a href="#">Our Work</a>
+                <div class="dd">
+                    <a href="#">All Restaurants</a>
+                    <a href="#">Wakuda</a>
+                    <a href="#">Chica</a>
+                    <a href="#">Spring Chicken</a>
+                    <a href="#">Bonano Pizza</a>
+                    <a href="#">Previous Concepts</a>
+                </div>
+            </div>
             <a href="#">Corporate Dining</a>
-            <a href="#">Journal</a>
+            <a href="#">Hospitality Consulting</a>
+            <a href="#">Sports &amp; Venues</a>
             <a href="#">Who We Are</a>
-            <a href="#">Contact</a>
+            <a href="#">Buzz</a>
+            <div class="has-dd">
+                <a href="#">Contact</a>
+                <div class="dd">
+                    <a href="#">Work With Us</a>
+                </div>
+            </div>
         </nav>
+        <button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
     </header>
 
     <main>
@@ -498,7 +534,8 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Our Work</a></li>
                     <li><a href="#">Corporate Dining</a></li>
-                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Hospitality Consulting</a></li>
+                    <li><a href="#">Sports &amp; Venues</a></li>
                     <li><a href="#">Who We Are</a></li>
                     <li><a href="#">Buzz</a></li>
                     <li><a href="#">Contact</a></li>
@@ -531,11 +568,12 @@
 
         /* nav: hidden at top & while scrolling down, shows on scroll up */
         var nav=$('#nav'), lastY=window.scrollY;
+        $('#burger').addEventListener('click',function(){nav.classList.toggle('open');nav.classList.add('show')});
         window.addEventListener('scroll',function(){
             var y=window.scrollY;
             if(y<300){nav.classList.remove('show')}
             else if(y<lastY-4){nav.classList.add('show')}
-            else if(y>lastY+4){nav.classList.remove('show')}
+            else if(y>lastY+4&&!nav.classList.contains('open')){nav.classList.remove('show')}
             lastY=y;
         },{passive:true});
 
