@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>About | 50 Eggs Hospitality Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root{--bg:#f6f2ea;--ink:#1a1a1a;--muted:rgba(26,26,26,.55);--line:rgba(26,26,26,.14);--card:#ebe6dd;--dark:#262626;--accent:#c4a35a;--pad:60px;--font:"Hanken Grotesk",sans-serif;--head:"Oswald",sans-serif;--ease:cubic-bezier(.4,0,.2,1)}
+        *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+        body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}p,h1,h2,h3,h4,ul{margin:0;padding:0}ul{list-style:none}
+        button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}::selection{background:var(--ink);color:#fff}
+        .wrap{max-width:1440px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+        .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:50;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:var(--bg);border-bottom:1px solid var(--line);transition:transform .45s var(--ease)}
+        .nav.hide{transform:translateY(-101%)}
+        .nav-logo img{height:30px;width:auto}
+        .nav-links{display:flex;align-items:center;gap:28px;font-size:13px;letter-spacing:.3px}
+        .has-dd{position:relative;padding:20px 0}
+        .dd{position:absolute;top:100%;left:-16px;min-width:220px;background:var(--bg);border:1px solid var(--line);padding:10px 16px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+        .has-dd:hover .dd,.has-dd:focus-within .dd{opacity:1;visibility:visible;transform:none}
+        .dd a{padding:7px 0;white-space:nowrap;font-size:13px}
+        .nav-links a{position:relative}.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+        .burger{display:none;width:28px;height:16px;position:relative;z-index:60}
+        .burger i{position:absolute;left:0;right:0;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),top .3s var(--ease)}
+        .burger i:nth-child(1){top:3px}.burger i:nth-child(2){top:11px}
+        .nav.open .burger i:nth-child(1){top:7px;transform:rotate(45deg)}.nav.open .burger i:nth-child(2){top:7px;transform:rotate(-45deg)}
+        .mob-panel{position:fixed;top:62px;left:0;right:0;bottom:0;z-index:45;background:var(--bg);padding:40px var(--pad);overflow:auto;transform:translateY(-110%);transition:transform .5s var(--ease)}
+        .nav.open+.mob-panel,.nav.open~.mob-panel{transform:none}
+        .mob-panel a{display:block;font-family:var(--head);font-size:36px;text-transform:uppercase;padding:10px 0}
+        .mob-panel .sub{font-family:var(--font);font-size:16px;padding-left:16px;margin-bottom:12px}.mob-panel .sub a{font-size:16px;padding:6px 0}
+        .sec-label{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+
+        .page-hero{padding:140px var(--pad) 60px;text-align:center}
+        .page-hero h1{font-family:var(--head);font-size:64px;text-transform:uppercase;font-weight:500;letter-spacing:.02em}
+        .page-hero p{font-size:18px;color:var(--muted);max-width:600px;margin:16px auto 0}
+
+        .about-mission{padding:0 0 80px}.about-mission .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .about-mission img{width:100%;aspect-ratio:4/3;object-fit:cover}
+        .about-mission h2{font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500;margin-bottom:16px}
+        .about-mission p{font-size:17px;line-height:1.6;color:var(--muted);margin-bottom:12px}
+
+        .model-sec{padding:80px 0;background:var(--card)}
+        .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+        .model-card{background:var(--bg);padding:36px 28px}
+        .model-card h3{font-family:var(--head);font-size:24px;text-transform:uppercase;font-weight:500;margin-bottom:12px}
+        .model-card p{font-size:15px;line-height:1.55;color:var(--muted)}
+        .model-card .num{font-family:var(--head);font-size:48px;color:var(--accent);line-height:1;margin-bottom:16px}
+
+        .founder{padding:80px 0}.founder .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+        .founder img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--card)}
+        .founder h2{font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+        .founder .role{font-size:14px;color:var(--accent);letter-spacing:.3px;margin-bottom:20px}
+        .founder p{font-size:17px;line-height:1.6;color:var(--muted);margin-bottom:12px}
+
+        .values{padding:80px 0}.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+        .val{padding:32px;border:1px solid var(--line)}
+        .val h3{font-family:var(--head);font-size:20px;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+        .val p{font-size:15px;line-height:1.55;color:var(--muted)}
+
+        .footer{background:var(--dark);color:#fff;padding:60px 0 32px}
+        .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+        .foot-logo img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+        .foot-tag{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);max-width:300px}
+        .foot-col h4{font-size:12px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px;color:rgba(255,255,255,.4)}
+        .foot-col a{display:block;font-size:14px;padding:4px 0;color:rgba(255,255,255,.7);transition:color .2s}.foot-col a:hover{color:#fff}
+        .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-size:12px;color:rgba(255,255,255,.35)}
+
+        @media(max-width:1024px){:root{--pad:32px}.about-mission .wrap,.founder .wrap{grid-template-columns:1fr}.model-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){:root{--pad:20px}.nav-links{display:none}.burger{display:block}.page-hero h1{font-size:40px}.model-grid,.values-grid{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs Hospitality Group" /></a>
+    <div class="nav-links">
+        <div class="has-dd"><a href="concepts.html">Our Concepts</a><div class="dd"><a href="concepts.html">All Concepts</a><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="concepts.html#bonano-pizza">Bonano Pizza</a><a href="champions.html">Champions Sport Kitchen</a></div></div>
+        <div class="has-dd"><a href="services.html">Services</a><div class="dd"><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div></div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+</nav>
+<div class="mob-panel" id="mobPanel">
+    <a href="index.html">Home</a><a href="concepts.html">Our Concepts</a><div class="sub"><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="champions.html">Champions Sport Kitchen</a></div>
+    <a href="services.html">Services</a><div class="sub"><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+    <p class="sec-label">Who We Are</p>
+    <h1>Pioneers in Hospitality</h1>
+    <p>For over two decades, 50 Eggs has been building restaurant brands from scratch &mdash; concept to culture, kitchen to community.</p>
+</section>
+
+<section class="about-mission rv">
+    <div class="wrap">
+        <img src="../img/Homepage/who%20we%20are%20section/image%201.webp" alt="50 Eggs hospitality" loading="lazy" />
+        <div>
+            <p class="sec-label">Our Story</p>
+            <h2>From One Idea to a Hospitality Company</h2>
+            <p>50 Eggs Hospitality Group was born in Miami in 2001, when founder John Kunkel opened Lime Fresh Mexican Grill with a simple belief: a restaurant should be more than a place to eat. It should be a brand.</p>
+            <p>That idea grew into Yardbird Table &amp; Bar, a James Beard semifinalist that became one of the most talked-about openings in Miami Beach. Then Swine, Khong River House, Chica and Wakuda &mdash; each one a new concept, built from zero, designed to become a destination.</p>
+            <p>Today, 50 Eggs is a full-service hospitality development and management company. We create original restaurant brands, operate them at the highest level, and consult for owners, developers and venues who want food &amp; beverage that actually works.</p>
+        </div>
+    </div>
+</section>
+
+<section class="model-sec rv">
+    <div class="wrap">
+        <p class="sec-label">How We Work</p>
+        <h2 style="font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500">Concept &middot; Build &middot; Operate</h2>
+        <div class="model-grid">
+            <div class="model-card">
+                <div class="num">01</div>
+                <h3>Concept</h3>
+                <p>We develop original restaurant brands from scratch &mdash; name, identity, menu, interior, culture. Every concept starts with a point of view and a city that needs it.</p>
+            </div>
+            <div class="model-card">
+                <div class="num">02</div>
+                <h3>Build</h3>
+                <p>We handle design, construction, hiring, training and launch. Our team has opened restaurants in Miami, Las Vegas, Singapore and Dallas &mdash; we know what it takes to get from lease to opening night.</p>
+            </div>
+            <div class="model-card">
+                <div class="num">03</div>
+                <h3>Operate</h3>
+                <p>We run what we build. Day-to-day operations, culinary standards, guest experience, brand consistency &mdash; we stay involved because reputation is built on every single service.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="founder rv">
+    <div class="wrap">
+        <img src="../img/Homepage/who%20we%20are%20section/Image%203.webp" alt="John Kunkel" loading="lazy" />
+        <div>
+            <p class="sec-label">Leadership</p>
+            <h2>John Kunkel</h2>
+            <p class="role">Founder &amp; CEO</p>
+            <p>John Kunkel founded 50 Eggs Hospitality Group in 2001 with the opening of Lime Fresh Mexican Grill, which grew into a regional brand before being acquired by Ruby Tuesday.</p>
+            <p>He went on to create Yardbird Table &amp; Bar, named a James Beard Foundation Best New Restaurant semifinalist and one of Bon App&eacute;tit&rsquo;s 50 Best New Restaurants. That success led to Swine Southern Table &amp; Bar, Khong River House, Chica and Wakuda &mdash; each concept reflecting his belief that great restaurants are built on original ideas, not formulas.</p>
+            <p>John&rsquo;s approach is hands-on. He develops every concept from the ground up, stays close to operations, and treats each brand as a long-term investment in a city&rsquo;s dining culture.</p>
+        </div>
+    </div>
+</section>
+
+<section class="values rv">
+    <div class="wrap">
+        <p class="sec-label">What We Stand For</p>
+        <h2 style="font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500;margin-bottom:0">Our Values</h2>
+        <div class="values-grid">
+            <div class="val"><h3>Original Concepts</h3><p>We don&rsquo;t copy. Every restaurant starts with a unique point of view &mdash; a cuisine, a culture, a gap in the market that only an original brand can fill.</p></div>
+            <div class="val"><h3>City First</h3><p>A concept should belong to the city it opens in. We study the market, the neighborhood and the culture before we design the menu.</p></div>
+            <div class="val"><h3>Craft Over Scale</h3><p>We grow thoughtfully. Every location has to earn the brand &mdash; we&rsquo;d rather have five concepts that matter than fifty that don&rsquo;t.</p></div>
+            <div class="val"><h3>Long-Term Thinking</h3><p>We build to stay. Our restaurants aren&rsquo;t trends &mdash; they&rsquo;re brands designed to outlast hype and become part of a city&rsquo;s identity.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="foot-top">
+            <div><div class="foot-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></div><p class="foot-tag">Rooted in Miami since 2001. We develop, operate and consult on restaurant concepts that become destinations.</p></div>
+            <div class="foot-col"><h4>Concepts</h4><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="concepts.html#bonano-pizza">Bonano Pizza</a><a href="champions.html">Champions Sport Kitchen</a></div>
+            <div class="foot-col"><h4>Services</h4><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div>
+            <div class="foot-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#">Careers</a></div>
+        </div>
+        <div class="foot-bottom"><span>&copy; 2024 50 Eggs Hospitality Group</span></div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a&&a.getAttribute('href')==='#')e.preventDefault()});
+var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',function(){nav.classList.toggle('open')});
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+var prevScroll=0;window.addEventListener('scroll',function(){var y=window.scrollY;if(y<80){nav.classList.remove('hide');return}if(y>prevScroll)nav.classList.add('hide');else nav.classList.remove('hide');prevScroll=y});
+</script>
+</body>
+</html>

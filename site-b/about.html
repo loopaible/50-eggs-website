@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>About | 50 Eggs Hospitality Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet" />
+    <style>
+        :root{--bg:#eee9dc;--tan:#dcd3bb;--ink:#2e2e2e;--gold:#99874d;--brown:#776759;--dark:#2e2e2e;--pad:36px;--sans:"Figtree",sans-serif;--serif:"Newsreader",Georgia,serif;--ease:cubic-bezier(.4,0,.2,1)}
+        *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+        body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}p,h1,h2,h3,h4,ul{margin:0;padding:0}ul{list-style:none}
+        button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}::selection{background:var(--gold);color:#fff}
+        .wrap{max-width:1400px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+        .eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+        .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+
+        .top{position:fixed;top:0;left:0;right:0;z-index:40;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:var(--bg);transition:transform .45s var(--ease)}.top.hide{transform:translateY(-101%)}
+        .logo img{height:36px;width:auto}
+        .top-r{display:flex;align-items:center;gap:32px}
+        .soc{display:flex;gap:16px}.soc svg{width:14px;height:14px;fill:var(--ink)}.soc a:hover svg{fill:var(--gold)}
+        .menu-btn{width:28px;height:18px;position:relative;z-index:50}.menu-btn i{position:absolute;left:0;right:0;height:1.5px;background:var(--ink);transition:transform .35s var(--ease),top .35s var(--ease),opacity .2s}.menu-btn i:nth-child(1){top:2px}.menu-btn i:nth-child(2){top:8px}.menu-btn i:nth-child(3){top:14px}
+        body.menu .menu-btn i:nth-child(1){top:8px;transform:rotate(45deg)}body.menu .menu-btn i:nth-child(2){opacity:0}body.menu .menu-btn i:nth-child(3){top:8px;transform:rotate(-45deg)}
+        .drawer{position:fixed;top:80px;right:0;bottom:0;width:min(440px,100%);background:var(--tan);z-index:39;padding:28px 40px 40px;overflow:auto;transform:translateX(101%);transition:transform .6s var(--ease)}body.menu .drawer{transform:none}
+        .drawer nav a{display:block;font-family:var(--serif);font-size:44px;font-weight:300;line-height:1.15;padding:8px 0}.drawer nav a:hover{color:var(--gold)}
+        .drawer .sub{margin-top:20px;display:flex;flex-direction:column;gap:10px;font-size:17px}.drawer .sub a{font-size:17px;padding:4px 0}.drawer .sub a:hover{color:var(--gold)}
+
+        .page-hero{padding:140px var(--pad) 60px;text-align:center}
+        .page-hero h1{font-family:var(--serif);font-size:56px;font-weight:300}
+        .page-hero p{font-size:17px;color:rgba(46,46,46,.6);max-width:580px;margin:14px auto 0}
+
+        .story{padding:0 0 80px}.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .story img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--tan)}
+        .story h2{font-family:var(--serif);font-size:36px;font-weight:300;margin-bottom:16px}
+        .story p{font-size:16px;line-height:1.6;color:rgba(46,46,46,.65);margin-bottom:10px}
+
+        .model{padding:80px 0;background:var(--tan)}
+        .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+        .m-card{background:var(--bg);padding:36px 28px}
+        .m-card .num{font-family:var(--serif);font-size:44px;color:var(--gold);font-weight:300;line-height:1;margin-bottom:14px}
+        .m-card h3{font-family:var(--serif);font-size:24px;font-weight:300;margin-bottom:10px}
+        .m-card p{font-size:15px;line-height:1.55;color:rgba(46,46,46,.6)}
+
+        .founder{padding:80px 0}.founder .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+        .founder img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--tan)}
+        .founder h2{font-family:var(--serif);font-size:36px;font-weight:300;margin-bottom:4px}
+        .founder .role{font-size:14px;color:var(--gold);letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}
+        .founder p{font-size:16px;line-height:1.6;color:rgba(46,46,46,.65);margin-bottom:10px}
+
+        .values{padding:80px 0}.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+        .val{padding:32px;border:1px solid var(--tan)}
+        .val h3{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:8px}
+        .val p{font-size:15px;line-height:1.55;color:rgba(46,46,46,.6)}
+
+        .footer{background:var(--dark);color:var(--bg);padding:60px 0 28px}
+        .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(238,233,220,.1)}
+        .foot-logo img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px}
+        .foot-tag{font-family:var(--serif);font-size:15px;line-height:1.5;color:rgba(238,233,220,.5);max-width:300px;font-weight:300}
+        .foot-col h4{font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;color:var(--gold)}
+        .foot-col a{display:block;font-size:14px;padding:4px 0;color:rgba(238,233,220,.6)}.foot-col a:hover{color:var(--bg)}
+        .foot-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:12px;color:rgba(238,233,220,.3)}
+
+        @media(max-width:1024px){.story .wrap,.founder .wrap{grid-template-columns:1fr}.model-grid{grid-template-columns:1fr 1fr}.foot-top{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){:root{--pad:20px}.page-hero h1{font-size:36px}.model-grid,.values-grid{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+
+<header class="top" id="topBar">
+    <a href="index.html" class="logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></a>
+    <div class="top-r">
+        <div class="soc"><a href="https://www.instagram.com/50eggsinc/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0122 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8A5.8 5.8 0 012 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a><a href="https://www.linkedin.com/company/50-eggs-hospitality-group" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a></div>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+</header>
+<div class="drawer"><nav><a href="index.html">Home</a><a href="concepts.html">Our Concepts</a><a href="services.html">Services</a><a href="champions.html">Champions Sport Kitchen</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><div class="sub"><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a></div></div>
+
+<section class="page-hero">
+    <p class="eyebrow">Who We Are</p>
+    <h1>Pioneers in Hospitality</h1>
+    <p>For over two decades, 50 Eggs has been building restaurant brands from scratch &mdash; concept to culture, kitchen to community.</p>
+</section>
+
+<section class="story rv">
+    <div class="wrap">
+        <img src="../img/Homepage/who%20we%20are%20section/image%201.webp" alt="50 Eggs hospitality" loading="lazy" />
+        <div>
+            <p class="eyebrow" style="margin-bottom:12px">Our Story</p>
+            <h2>From One Idea to a Hospitality Company</h2>
+            <p>50 Eggs Hospitality Group was born in Miami in 2001, when founder John Kunkel opened Lime Fresh Mexican Grill with a simple belief: a restaurant should be more than a place to eat. It should be a brand.</p>
+            <p>That idea grew into Yardbird Table &amp; Bar, a James Beard semifinalist that became one of the most talked-about openings in Miami Beach. Then Swine, Khong River House, Chica and Wakuda &mdash; each one a new concept, built from zero, designed to become a destination.</p>
+            <p>Today, 50 Eggs is a full-service hospitality development and management company. We create original restaurant brands, operate them at the highest level, and consult for owners, developers and venues who want food &amp; beverage that actually works.</p>
+        </div>
+    </div>
+</section>
+
+<section class="model rv">
+    <div class="wrap">
+        <p class="eyebrow">How We Work</p>
+        <h2 style="font-family:var(--serif);font-size:36px;font-weight:300;margin-top:4px">Concept &middot; Build &middot; Operate</h2>
+        <div class="model-grid">
+            <div class="m-card"><div class="num">01</div><h3>Concept</h3><p>We develop original restaurant brands from scratch &mdash; name, identity, menu, interior, culture. Every concept starts with a point of view and a city that needs it.</p></div>
+            <div class="m-card"><div class="num">02</div><h3>Build</h3><p>We handle design, construction, hiring, training and launch. Our team has opened restaurants in Miami, Las Vegas, Singapore and Dallas.</p></div>
+            <div class="m-card"><div class="num">03</div><h3>Operate</h3><p>We run what we build. Day-to-day operations, culinary standards, guest experience, brand consistency &mdash; reputation is built on every single service.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="founder rv">
+    <div class="wrap">
+        <img src="../img/Homepage/who%20we%20are%20section/Image%203.webp" alt="John Kunkel" loading="lazy" />
+        <div>
+            <p class="eyebrow" style="margin-bottom:12px">Leadership</p>
+            <h2>John Kunkel</h2>
+            <p class="role">Founder &amp; CEO</p>
+            <p>John Kunkel founded 50 Eggs Hospitality Group in 2001 with the opening of Lime Fresh Mexican Grill, which grew into a regional brand before being acquired by Ruby Tuesday.</p>
+            <p>He went on to create Yardbird Table &amp; Bar, named a James Beard Foundation Best New Restaurant semifinalist and one of Bon App&eacute;tit&rsquo;s 50 Best New Restaurants. That success led to Swine, Khong River House, Chica and Wakuda &mdash; each concept reflecting his belief that great restaurants are built on original ideas, not formulas.</p>
+            <p>John&rsquo;s approach is hands-on. He develops every concept from the ground up, stays close to operations, and treats each brand as a long-term investment in a city&rsquo;s dining culture.</p>
+        </div>
+    </div>
+</section>
+
+<section class="values rv">
+    <div class="wrap">
+        <p class="eyebrow">What We Stand For</p>
+        <h2 style="font-family:var(--serif);font-size:36px;font-weight:300;margin-top:4px">Our Values</h2>
+        <div class="values-grid">
+            <div class="val"><h3>Original Concepts</h3><p>We don&rsquo;t copy. Every restaurant starts with a unique point of view &mdash; a cuisine, a culture, a gap in the market that only an original brand can fill.</p></div>
+            <div class="val"><h3>City First</h3><p>A concept should belong to the city it opens in. We study the market, the neighborhood and the culture before we design the menu.</p></div>
+            <div class="val"><h3>Craft Over Scale</h3><p>We grow thoughtfully. Every location has to earn the brand &mdash; we&rsquo;d rather have five concepts that matter than fifty that don&rsquo;t.</p></div>
+            <div class="val"><h3>Long-Term Thinking</h3><p>We build to stay. Our restaurants aren&rsquo;t trends &mdash; they&rsquo;re brands designed to outlast hype and become part of a city&rsquo;s identity.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="foot-top">
+            <div><div class="foot-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></div><p class="foot-tag">Rooted in Miami since 2001.</p></div>
+            <div class="foot-col"><h4>Concepts</h4><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="champions.html">Champions Sport Kitchen</a></div>
+            <div class="foot-col"><h4>Services</h4><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div>
+            <div class="foot-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="foot-bottom"><span>&copy; 2024 50 Eggs Hospitality Group</span></div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a&&a.getAttribute('href')==='#')e.preventDefault()});
+document.getElementById('menuBtn').addEventListener('click',function(){document.body.classList.toggle('menu')});
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+var top_=document.getElementById('topBar'),prev=0;
+window.addEventListener('scroll',function(){var y=window.scrollY;if(y<80){top_.classList.remove('hide');return}if(y>prev)top_.classList.add('hide');else top_.classList.remove('hide');prev=y});
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Contact | 50 Eggs Hospitality Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root{--bg:#f6f2ea;--ink:#1a1a1a;--muted:rgba(26,26,26,.55);--line:rgba(26,26,26,.14);--card:#ebe6dd;--dark:#262626;--accent:#c4a35a;--pad:60px;--font:"Hanken Grotesk",sans-serif;--head:"Oswald",sans-serif;--ease:cubic-bezier(.4,0,.2,1)}
+        *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+        body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}p,h1,h2,h3,h4,ul{margin:0;padding:0}ul{list-style:none}
+        button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}::selection{background:var(--ink);color:#fff}
+        .wrap{max-width:1440px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:50;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:var(--bg);border-bottom:1px solid var(--line);transition:transform .45s var(--ease)}.nav.hide{transform:translateY(-101%)}
+        .nav-logo img{height:30px;width:auto}
+        .nav-links{display:flex;align-items:center;gap:28px;font-size:13px;letter-spacing:.3px}
+        .has-dd{position:relative;padding:20px 0}.dd{position:absolute;top:100%;left:-16px;min-width:220px;background:var(--bg);border:1px solid var(--line);padding:10px 16px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}.has-dd:hover .dd{opacity:1;visibility:visible;transform:none}.dd a{padding:7px 0;white-space:nowrap;font-size:13px}
+        .nav-links a{position:relative}.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+        .burger{display:none;width:28px;height:16px;position:relative;z-index:60}.burger i{position:absolute;left:0;right:0;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),top .3s var(--ease)}.burger i:nth-child(1){top:3px}.burger i:nth-child(2){top:11px}
+        .nav.open .burger i:nth-child(1){top:7px;transform:rotate(45deg)}.nav.open .burger i:nth-child(2){top:7px;transform:rotate(-45deg)}
+        .mob-panel{position:fixed;top:62px;left:0;right:0;bottom:0;z-index:45;background:var(--bg);padding:40px var(--pad);overflow:auto;transform:translateY(-110%);transition:transform .5s var(--ease)}.nav.open~.mob-panel{transform:none}
+        .mob-panel a{display:block;font-family:var(--head);font-size:36px;text-transform:uppercase;padding:10px 0}
+        .sec-label{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+
+        .page-hero{padding:140px var(--pad) 60px;text-align:center}
+        .page-hero h1{font-family:var(--head);font-size:64px;text-transform:uppercase;font-weight:500}
+        .page-hero p{font-size:18px;color:var(--muted);max-width:520px;margin:16px auto 0}
+
+        .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;padding-bottom:100px}
+        .info-block{margin-bottom:28px}
+        .info-block h3{font-family:var(--head);font-size:18px;text-transform:uppercase;font-weight:500;margin-bottom:8px;letter-spacing:.02em}
+        .info-block p{font-size:15px;line-height:1.6;color:var(--muted)}
+        .info-block a{border-bottom:1px solid var(--line);transition:border-color .2s}.info-block a:hover{border-color:var(--ink)}
+        .concepts-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+        .concepts-links a{background:var(--card);padding:8px 16px;font-size:13px;border:0}
+
+        form label{display:block;font-size:13px;letter-spacing:.3px;text-transform:uppercase;margin-bottom:6px;color:var(--muted)}
+        form input,form select,form textarea{width:100%;padding:12px 16px;font:inherit;font-size:15px;background:var(--card);border:1px solid var(--line);outline:0;transition:border-color .2s;margin-bottom:20px}
+        form input:focus,form select:focus,form textarea:focus{border-color:var(--ink)}
+        form textarea{min-height:140px;resize:vertical}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+        .btn-submit{display:inline-block;padding:14px 40px;font-size:13px;letter-spacing:.5px;text-transform:uppercase;background:var(--dark);color:#fff;border:0;cursor:pointer;transition:opacity .2s}.btn-submit:hover{opacity:.85}
+
+        .footer{background:var(--dark);color:#fff;padding:60px 0 32px}
+        .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+        .foot-logo img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+        .foot-tag{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);max-width:300px}
+        .foot-col h4{font-size:12px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px;color:rgba(255,255,255,.4)}
+        .foot-col a{display:block;font-size:14px;padding:4px 0;color:rgba(255,255,255,.7)}.foot-col a:hover{color:#fff}
+        .foot-bottom{display:flex;justify-content:space-between;padding-top:24px;font-size:12px;color:rgba(255,255,255,.35)}
+
+        @media(max-width:1024px){:root{--pad:32px}.contact-grid{grid-template-columns:1fr}}
+        @media(max-width:768px){:root{--pad:20px}.nav-links{display:none}.burger{display:block}.page-hero h1{font-size:40px}.form-row{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></a>
+    <div class="nav-links">
+        <div class="has-dd"><a href="concepts.html">Our Concepts</a><div class="dd"><a href="concepts.html">All Concepts</a><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="champions.html">Champions Sport Kitchen</a></div></div>
+        <div class="has-dd"><a href="services.html">Services</a><div class="dd"><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div></div>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+</nav>
+<div class="mob-panel" id="mobPanel"><a href="index.html">Home</a><a href="concepts.html">Our Concepts</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+<section class="page-hero">
+    <p class="sec-label">Get In Touch</p>
+    <h1>Contact Us</h1>
+    <p>Whether you&rsquo;re a developer, a venue operator, or just a fan &mdash; we&rsquo;d love to hear from you.</p>
+</section>
+
+<div class="wrap">
+    <div class="contact-grid">
+        <div>
+            <div class="info-block">
+                <h3>Headquarters</h3>
+                <p>40 Northeast 2nd Ave<br />Miami, FL 33138</p>
+            </div>
+            <div class="info-block">
+                <h3>General Inquiries</h3>
+                <p><a href="tel:+13056721000">(305) 672-1000</a></p>
+                <p><a href="mailto:hello@50eggsinc.com">hello@50eggsinc.com</a></p>
+            </div>
+            <div class="info-block">
+                <h3>Development &amp; Consulting</h3>
+                <p>Interested in partnering with 50 Eggs on a corporate dining, sports venue or hospitality consulting project? Reach out directly.</p>
+            </div>
+            <div class="info-block">
+                <h3>Press</h3>
+                <p><a href="mailto:press@50eggsinc.com">press@50eggsinc.com</a></p>
+            </div>
+            <div class="info-block">
+                <h3>Careers</h3>
+                <p><a href="mailto:careers@50eggsinc.com">careers@50eggsinc.com</a></p>
+            </div>
+            <div class="info-block">
+                <h3>Our Concepts</h3>
+                <div class="concepts-links">
+                    <a href="concepts.html#wakuda">Wakuda</a>
+                    <a href="concepts.html#chica">Chica</a>
+                    <a href="concepts.html#spring-chicken">Spring Chicken</a>
+                    <a href="concepts.html#bonano-pizza">Bonano Pizza</a>
+                    <a href="champions.html">Champions Sport Kitchen</a>
+                </div>
+            </div>
+        </div>
+        <form action="#" method="post" onsubmit="return false">
+            <div class="form-row">
+                <div><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your full name" /></div>
+                <div><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@email.com" /></div>
+            </div>
+            <div class="form-row">
+                <div><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(305) 555-0123" /></div>
+                <div><label for="topic">I&rsquo;m Reaching Out About</label>
+                    <select id="topic" name="topic">
+                        <option>General Inquiry</option>
+                        <option>Corporate Dining</option>
+                        <option>Hospitality Consulting</option>
+                        <option>Sports &amp; Venues</option>
+                        <option>Champions Sport Kitchen</option>
+                        <option>Press</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+            </div>
+            <div><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us how we can help."></textarea></div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="foot-top">
+            <div><div class="foot-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></div><p class="foot-tag">Rooted in Miami since 2001.</p></div>
+            <div class="foot-col"><h4>Concepts</h4><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="champions.html">Champions Sport Kitchen</a></div>
+            <div class="foot-col"><h4>Services</h4><a href="services.html#corporate">Corporate Dining</a><a href="services.html#consulting">Hospitality Consulting</a><a href="services.html#sports">Sports &amp; Venues</a></div>
+            <div class="foot-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="foot-bottom"><span>&copy; 2024 50 Eggs Hospitality Group</span></div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a&&a.getAttribute('href')==='#')e.preventDefault()});
+var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',function(){nav.classList.toggle('open')});
+var prevScroll=0;window.addEventListener('scroll',function(){var y=window.scrollY;if(y<80){nav.classList.remove('hide');return}if(y>prevScroll)nav.classList.add('hide');else nav.classList.remove('hide');prevScroll=y});
+</script>
+</body>
+</html>

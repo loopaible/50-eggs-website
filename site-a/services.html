@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Services | 50 Eggs Hospitality Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root{--bg:#f6f2ea;--ink:#1a1a1a;--muted:rgba(26,26,26,.55);--line:rgba(26,26,26,.14);--card:#ebe6dd;--dark:#262626;--accent:#c4a35a;--pad:60px;--font:"Hanken Grotesk",sans-serif;--head:"Oswald",sans-serif;--ease:cubic-bezier(.4,0,.2,1)}
+        *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+        body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}p,h1,h2,h3,h4,ul{margin:0;padding:0}ul{list-style:none}
+        button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}::selection{background:var(--ink);color:#fff}
+        .wrap{max-width:1440px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+        .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:50;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:var(--bg);border-bottom:1px solid var(--line);transition:transform .45s var(--ease)}.nav.hide{transform:translateY(-101%)}
+        .nav-logo img{height:30px;width:auto}
+        .nav-links{display:flex;align-items:center;gap:28px;font-size:13px;letter-spacing:.3px}
+        .has-dd{position:relative;padding:20px 0}.dd{position:absolute;top:100%;left:-16px;min-width:220px;background:var(--bg);border:1px solid var(--line);padding:10px 16px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}.has-dd:hover .dd{opacity:1;visibility:visible;transform:none}.dd a{padding:7px 0;white-space:nowrap;font-size:13px}
+        .nav-links a{position:relative}.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease)}.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+        .burger{display:none;width:28px;height:16px;position:relative;z-index:60}.burger i{position:absolute;left:0;right:0;height:1.5px;background:var(--ink);transition:transform .3s var(--ease),top .3s var(--ease)}.burger i:nth-child(1){top:3px}.burger i:nth-child(2){top:11px}
+        .nav.open .burger i:nth-child(1){top:7px;transform:rotate(45deg)}.nav.open .burger i:nth-child(2){top:7px;transform:rotate(-45deg)}
+        .mob-panel{position:fixed;top:62px;left:0;right:0;bottom:0;z-index:45;background:var(--bg);padding:40px var(--pad);overflow:auto;transform:translateY(-110%);transition:transform .5s var(--ease)}.nav.open~.mob-panel{transform:none}
+        .mob-panel a{display:block;font-family:var(--head);font-size:36px;text-transform:uppercase;padding:10px 0}.mob-panel .sub{font-family:var(--font);font-size:16px;padding-left:16px;margin-bottom:12px}.mob-panel .sub a{font-size:16px;padding:6px 0}
+        .sec-label{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+        .page-hero{padding:140px var(--pad) 60px;text-align:center}
+        .page-hero h1{font-family:var(--head);font-size:64px;text-transform:uppercase;font-weight:500}
+        .page-hero p{font-size:18px;color:var(--muted);max-width:640px;margin:16px auto 0}
+
+        .intro{padding:0 0 80px}.intro p{font-size:28px;line-height:1.45;font-weight:300;max-width:800px}
+        .intro em{font-style:normal;color:var(--accent)}
+
+        .svc-block{padding:80px 0;border-top:1px solid var(--line)}
+        .svc-block .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+        .svc-block:nth-child(odd) .wrap{direction:rtl}.svc-block:nth-child(odd) .wrap>*{direction:ltr}
+        .svc-block figure{margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--card)}
+        .svc-block img{width:100%;height:100%;object-fit:cover}
+        .svc-block h2{font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500;margin-bottom:16px}
+        .svc-block p{font-size:16px;line-height:1.6;color:var(--muted);margin-bottom:10px}
+        .svc-block ul{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+        .svc-block li{background:var(--card);padding:8px 16px;font-size:13px;letter-spacing:.3px}
+
+        .approach{background:var(--dark);color:#fff;padding:80px 0}
+        .approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px}
+        .approach-card{border:1px solid rgba(255,255,255,.12);padding:32px 24px}
+        .approach-card .num{font-family:var(--head);font-size:40px;color:var(--accent);margin-bottom:12px}
+        .approach-card h3{font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;margin-bottom:10px}
+        .approach-card p{font-size:14px;line-height:1.55;color:rgba(255,255,255,.6)}
+
+        .cta{padding:80px 0;text-align:center}
+        .cta h2{font-family:var(--head);font-size:48px;text-transform:uppercase;font-weight:500;margin-bottom:16px}
+        .cta p{font-size:18px;color:var(--muted);max-width:520px;margin:0 auto 28px}
+        .btn{display:inline-block;padding:14px 32px;font-size:13px;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--ink);transition:background .3s,color .3s}.btn:hover{background:var(--ink);color:#fff}
+
+        .footer{background:var(--dark);color:#fff;padding:60px 0 32px}
+        .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+        .foot-logo img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+        .foot-tag{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);max-width:300px}
+        .foot-col h4{font-size:12px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px;color:rgba(255,255,255,.4)}
+        .foot-col a{display:block;font-size:14px;padding:4px 0;color:rgba(255,255,255,.7)}.foot-col a:hover{color:#fff}
+        .foot-bottom{display:flex;justify-content:space-between;padding-top:24px;font-size:12px;color:rgba(255,255,255,.35)}
+
+        @media(max-width:1024px){:root{--pad:32px}.svc-block .wrap{grid-template-columns:1fr}.svc-block:nth-child(odd) .wrap{direction:ltr}.approach-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){:root{--pad:20px}.nav-links{display:none}.burger{display:block}.page-hero h1{font-size:40px}.approach-grid{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}.intro p{font-size:20px}}
+    </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></a>
+    <div class="nav-links">
+        <div class="has-dd"><a href="concepts.html">Our Concepts</a><div class="dd"><a href="concepts.html">All Concepts</a><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="champions.html">Champions Sport Kitchen</a></div></div>
+        <div class="has-dd"><a href="services.html">Services</a><div class="dd"><a href="#corporate">Corporate Dining</a><a href="#consulting">Hospitality Consulting</a><a href="#sports">Sports &amp; Venues</a></div></div>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+</nav>
+<div class="mob-panel" id="mobPanel"><a href="index.html">Home</a><a href="concepts.html">Our Concepts</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+<section class="page-hero">
+    <p class="sec-label">What We Do</p>
+    <h1>Beyond the Table</h1>
+    <p>We don&rsquo;t just build our own restaurants. We bring two decades of brand-building experience to owners, developers and venues who want food &amp; beverage that actually works.</p>
+</section>
+
+<section class="intro rv">
+    <div class="wrap">
+        <p>50 Eggs is a <em>hospitality development and management company</em>. We create original restaurant brands, operate them at the highest level, and consult for partners who want the same quality in their own spaces.</p>
+    </div>
+</section>
+
+<div id="corporate" class="svc-block rv">
+    <div class="wrap">
+        <figure><img src="../preview/assets/service-1.webp" alt="Corporate Dining" loading="lazy" /></figure>
+        <div>
+            <p class="sec-label">Service</p>
+            <h2>Corporate Dining</h2>
+            <p>Workplace dining shouldn&rsquo;t feel like a cafeteria. We design and operate food &amp; beverage programs for corporate campuses that turn daily meals into a reason to come to the office.</p>
+            <p>Our approach: chef-driven menus, rotating seasonal concepts, hospitality-grade service, and spaces designed to feel like a restaurant, not a food court.</p>
+            <ul><li>Menu Development</li><li>Kitchen Design</li><li>Staff Training</li><li>Brand Identity</li><li>Operations Management</li></ul>
+        </div>
+    </div>
+</div>
+
+<div id="consulting" class="svc-block rv">
+    <div class="wrap">
+        <figure><img src="../preview/assets/service-2.webp" alt="Hospitality Consulting" loading="lazy" /></figure>
+        <div>
+            <p class="sec-label">Service</p>
+            <h2>Hospitality Consulting</h2>
+            <p>From concept creation to operational turnarounds, we work with owners, developers and operators who want more from their food &amp; beverage programs.</p>
+            <p>We&rsquo;ve built six concepts from scratch, launched restaurants in four cities, and grown a brand that was acquired by a public company. We bring that experience to every engagement.</p>
+            <ul><li>Concept Development</li><li>Menu Engineering</li><li>Operational Audits</li><li>Brand Strategy</li><li>Launch Support</li></ul>
+        </div>
+    </div>
+</div>
+
+<div id="sports" class="svc-block rv">
+    <div class="wrap">
+        <figure><img src="../preview/assets/service-3.webp" alt="Sports &amp; Venues" loading="lazy" /></figure>
+        <div>
+            <p class="sec-label">Service</p>
+            <h2>Sports &amp; Venues</h2>
+            <p>Arenas and entertainment venues deserve better food. We create elevated dining concepts designed for the energy and pace of live events &mdash; premium quality, fast execution, big atmosphere.</p>
+            <p>Our Champions Sport Kitchen concept was born from this belief: fans deserve a destination, not a concession stand.</p>
+            <ul><li>Venue Concept Design</li><li>Fan Experience Strategy</li><li>Premium F&amp;B Programs</li><li>Operations &amp; Staffing</li></ul>
+        </div>
+    </div>
+</div>
+
+<section class="approach rv">
+    <div class="wrap">
+        <p class="sec-label" style="color:rgba(255,255,255,.4)">Our Process</p>
+        <h2 style="font-family:var(--head);font-size:36px;text-transform:uppercase;font-weight:500;color:#fff">How We Work With Partners</h2>
+        <div class="approach-grid">
+            <div class="approach-card"><div class="num">01</div><h3>Discovery</h3><p>We study the market, the space, the audience and the opportunity. No two projects start the same way.</p></div>
+            <div class="approach-card"><div class="num">02</div><h3>Concept</h3><p>We develop a brand from scratch: name, identity, menu, interior vision and operational model.</p></div>
+            <div class="approach-card"><div class="num">03</div><h3>Build</h3><p>We manage design, construction, hiring, training and launch. We&rsquo;ve done this in Miami, Las Vegas, Singapore and Dallas.</p></div>
+            <div class="approach-card"><div class="num">04</div><h3>Operate</h3><p>We stay involved. Day-to-day management, culinary standards, guest experience and brand consistency.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cta rv">
+    <div class="wrap">
+        <h2>Let&rsquo;s Build Together</h2>
+        <p>Looking for a hospitality partner with two decades of brand-building experience? Let&rsquo;s talk.</p>
+        <a href="contact.html" class="btn">Get In Touch</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="foot-top">
+            <div><div class="foot-logo"><img src="../img/50%20Eggs%20NEW%20LOGO%20blue.webp" alt="50 Eggs" /></div><p class="foot-tag">Rooted in Miami since 2001.</p></div>
+            <div class="foot-col"><h4>Concepts</h4><a href="concepts.html#wakuda">Wakuda</a><a href="concepts.html#chica">Chica</a><a href="concepts.html#spring-chicken">Spring Chicken</a><a href="champions.html">Champions Sport Kitchen</a></div>
+            <div class="foot-col"><h4>Services</h4><a href="#corporate">Corporate Dining</a><a href="#consulting">Hospitality Consulting</a><a href="#sports">Sports &amp; Venues</a></div>
+            <div class="foot-col"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="foot-bottom"><span>&copy; 2024 50 Eggs Hospitality Group</span></div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a&&a.getAttribute('href')==='#')e.preventDefault()});
+var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.addEventListener('click',function(){nav.classList.toggle('open')});
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+var prevScroll=0;window.addEventListener('scroll',function(){var y=window.scrollY;if(y<80){nav.classList.remove('hide');return}if(y>prevScroll)nav.classList.add('hide');else nav.classList.remove('hide');prevScroll=y});
+</script>
+</body>
+</html>
